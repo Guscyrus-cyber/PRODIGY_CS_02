@@ -1,0 +1,35 @@
+# Encryption key (can be any integer between 0-255)
+key = 123  # Keep this key safe and consistent for encryption and decryption
+
+# Encrypt the bytearray
+def encrypt_data(byte_data, key):
+    return bytearray([byte ^ key for byte in byte_data])
+
+# Decrypt the bytearray
+def decrypt_data(encrypted_data, key):
+    return bytearray([byte ^ key for byte in encrypted_data])
+
+# Path to save the encrypted image
+encrypted_image_path = os.path.join(desktop_path, "encrypted_unencrypted.jpg")
+
+# Encrypt the bytearray
+encrypted_data = encrypt_data(byte_data, key)
+
+# Save the encrypted data as a file
+with open(encrypted_image_path, 'wb') as file:
+    file.write(encrypted_data)
+print(f"Encrypted image saved as: {encrypted_image_path}")
+
+# Path to save the decrypted image
+decrypted_image_path = os.path.join(desktop_path, "decrypted_unencrypted.jpg")
+
+# Decrypt the data back to original
+decrypted_data = decrypt_data(encrypted_data, key)
+
+# Save the decrypted data as a file
+with open(decrypted_image_path, 'wb') as file:
+    file.write(decrypted_data)
+print(f"Decrypted image saved as: {decrypted_image_path}")
+Encrypted image saved as: /home/user/Desktop/encrypted_unencrypted.jpg
+Decrypted image saved as: /home/user/Desktop/decrypted_unencrypted.jpg
+​

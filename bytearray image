@@ -1,0 +1,84 @@
+import os
+
+# Correct the file name to match your file
+file_name = "unencrypted.jpg"
+
+# Construct the path to the image file on the desktop
+desktop_path = os.path.join(os.path.expanduser("~"), "Desktop")
+image_path = os.path.join(desktop_path, file_name)
+
+# Initialize byte_data to avoid undefined variable error
+byte_data = None
+
+try:
+    # Open the image file in binary mode and read its contents
+    with open(image_path, 'rb') as file:
+        byte_data = bytearray(file.read())
+    print("Image successfully converted to bytearray.")
+except FileNotFoundError:
+    print(f"Error: File not found at {image_path}. Please ensure the file exists.")
+except Exception as e:
+    print(f"An error occurred: {e}")
+
+# Ensure byte_data is defined before using it
+if byte_data:
+    print("First 10 bytes of the image:", byte_data[:10])  # Optional: Print the first 10 bytes
+else:
+    print("Failed to convert the image to bytearray.")
+import os
+
+# Correct the file name to match your file
+file_name = "unencrypted.jpg"
+
+# Construct the path to the image file on the desktop
+desktop_path = os.path.join(os.path.expanduser("~"), "Desktop")
+image_path = os.path.join(desktop_path, file_name)
+
+# Initialize byte_data to avoid undefined variable error
+byte_data = None
+
+try:
+    # Open the image file in binary mode and read its contents
+    with open(image_path, 'rb') as file:
+        byte_data = bytearray(file.read())
+    print("Image successfully converted to bytearray.")
+except FileNotFoundError:
+    print(f"Error: File not found at {image_path}. Please ensure the file exists.")
+except Exception as e:
+    print(f"An error occurred: {e}")
+
+# Ensure byte_data is defined before using it
+if byte_data:
+    print("First 10 bytes of the image:", byte_data[:10])  # Optional: Print the first 10 bytes
+else:
+    print("Failed to convert the image to bytearray.")
+import os
+
+# Correct the file name to match your file
+file_name = "unencrypted.jpg"
+
+# Construct the path to the image file on the desktop
+desktop_path = os.path.join(os.path.expanduser("~"), "Desktop")
+image_path = os.path.join(desktop_path, file_name)
+
+# Initialize byte_data to avoid undefined variable error
+byte_data = None
+
+try:
+    # Open the image file in binary mode and read its contents
+    with open(image_path, 'rb') as file:
+        byte_data = bytearray(file.read())
+    print("Image successfully converted to bytearray.")
+except FileNotFoundError:
+    print(f"Error: File not found at {image_path}. Please ensure the file exists.")
+except Exception as e:
+    print(f"An error occurred: {e}")
+
+# Ensure byte_data is defined before using it
+if byte_data:
+    print("First 10 bytes of the image:", byte_data[:10])  # Optional: Print the first 10 bytes
+else:
+    print("Failed to convert the image to bytearray.")
+Image successfully converted to bytearray.
+First 10 bytes of the image: bytearray(b'\xff\xd8\xff\xe0\x00\x10JFIF')Image successfully converted to bytearray.
+First 10 bytes of the image: bytearray(b'\xff\xd8\xff\xe0\x00\x10JFIF')
